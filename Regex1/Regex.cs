@@ -15,8 +15,22 @@ namespace Regex1
             string Firstname = Console.ReadLine();
             string firstname = "^[A-Z]{1}[a-z]{2,}";
             Regex regex = new Regex(firstname);
-
             if (regex.IsMatch(Firstname))
+            {
+                Console.Write("Name is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter First Letter Capital \n");
+            }
+        }
+        public void LastNameValidation()
+        {
+            Console.WriteLine("Enter Last Name");
+            string Lastname = Console.ReadLine();
+            string lastname = "^[A-Z]{1}[a-z]{2,}$";
+            Regex regex1 = new Regex(lastname);
+            if (regex1.IsMatch(Lastname))
             {
                 Console.Write("Name is Valid \n");
             }
