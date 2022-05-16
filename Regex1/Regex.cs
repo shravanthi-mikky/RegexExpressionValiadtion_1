@@ -88,7 +88,7 @@ namespace Regex1
         {
             Console.WriteLine("Enter Password :");
             var Password = Console.ReadLine();
-            var PasswordFormat = "(?=[A-Z])[a-zA-Z0-9]{8,}";
+            var PasswordFormat = "[a-zA-Z0-9](?=.*[A-Z]){8,}";
             Regex regex1 = new Regex(PasswordFormat);
             if (regex1.IsMatch(Password))
             {

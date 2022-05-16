@@ -28,7 +28,7 @@ while (true)
             RegexValidation r5 = new();
             r5.Password();
             break;
-        case 7:
+        case 6:
             RegexValidation r6 = new();
             r6.PasswordRule2();
             break;
