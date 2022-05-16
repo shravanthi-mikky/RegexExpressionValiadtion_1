@@ -4,7 +4,7 @@ using Regex1;
 Console.WriteLine("Validation for Form ");
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1)First Name \n2 Last Name\n3) Email\n4) Mobile Number\n5) Password With min 8 Characters");
+    Console.WriteLine("Please choose the option :\n1)First Name \n2 Last Name\n3) Email\n4) Mobile Number\n5) Password With min 8 Characters\n6) Password with atleast one capital letter");
     int option = Convert.ToInt16(Console.ReadLine());
     switch (option)
     {
@@ -27,7 +27,10 @@ while (true)
         case 5:
             RegexValidation r5 = new();
             r5.Password();
-
+            break;
+        case 7:
+            RegexValidation r6 = new();
+            r6.PasswordRule2();
             break;
         default:
             Console.WriteLine("Please enter the correct value.");
