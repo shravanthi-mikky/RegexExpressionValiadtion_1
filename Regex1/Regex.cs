@@ -54,5 +54,20 @@ namespace Regex1
                 Console.Write("Please Enter Email ID in Proper Format \n");
             }
         }
+        public void MobileNumber()
+        {
+            Console.WriteLine("Enter Mobile Number :");
+            var Number = Console.ReadLine();
+            var NumberFormat = "^[0-9]{2}\\s[0-9]{10}$";
+            Regex regex1 = new Regex(NumberFormat);
+            if (regex1.IsMatch(Number))
+            {
+                Console.Write("Given Phone Number is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter Number in Proper Format \n");
+            }
+        }
     }
 }
