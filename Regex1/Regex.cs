@@ -114,5 +114,20 @@ namespace Regex1
                 Console.Write("Please Enter Password in Proper Format \n");
             }
         }
+        public void PasswordRule4()
+        {
+            Console.WriteLine("Enter Password :");
+            var Password = Console.ReadLine();
+            var PasswordFormat = "(?=.*[A-Z0-9](?=.*[$!%*#?&])[a-zA-Z0-9]{8,}[$!%*#?&]{1}";
+            Regex regex1 = new Regex(PasswordFormat);
+            if (regex1.IsMatch(Password))
+            {
+                Console.Write("Given Password is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter Password in Proper Format \n");
+            }
+        }
     }
 }
