@@ -9,126 +9,141 @@ namespace Regex1
 {
     public class RegexValidation
     {
-        public void FirstNameValidation()
-        {  
-            Console.WriteLine("Enter First Name");
-            string Firstname = Console.ReadLine();
+        public bool FirstNameValidation(string Firstname)
+        {
+            bool status;
             string firstname = "^[A-Z]{1}[a-z]{2,}";
             Regex regex = new Regex(firstname);
             if (regex.IsMatch(Firstname))
             {
+                status = true;
                 Console.Write("Name is Valid \n");
             }
             else
             {
+                status = false;
                 Console.Write("Please Enter First Letter Capital \n");
             }
+            return status;
         }
-        public void LastNameValidation()
+        public bool LastNameValidation(string Lastname)
         {
-            Console.WriteLine("Enter Last Name");
-            string Lastname = Console.ReadLine();
+            bool status;
             string lastname = "^[A-Z]{1}[a-z]{2,}$";
             Regex regex1 = new Regex(lastname);
             if (regex1.IsMatch(Lastname))
             {
+                status = true;
                 Console.Write("Name is Valid \n");
             }
             else
             {
+                status = false;
                 Console.Write("Please Enter First Letter Capital \n");
             }
+            return status;
         }
-        public void Email()
+        public bool Email(string email)
         {
-            Console.WriteLine("Enter Email Id");
-            string email = Console.ReadLine();
+            bool status;
             string emailFormat = "^[A-Za-z](.[a-z])+@[A-Za-z]+.[a-z]{2,4}(.[a-z]{2,3})?$";
             Regex regex1 = new Regex(emailFormat);
             if (regex1.IsMatch(email))
             {
+                status = true;
                 Console.Write("Given Email ID is Valid \n");
             }
             else
             {
+                status = false;
                 Console.Write("Please Enter Email ID in Proper Format \n");
             }
+            return status;
         }
-        public void MobileNumber()
+        public bool MobileNumber(string Number)
         {
-            Console.WriteLine("Enter Mobile Number :");
-            var Number = Console.ReadLine();
-            var NumberFormat = "^[0-9]{2}\\s[0-9]{10}$";
+            bool status;
+            string NumberFormat = "^[0-9]{2}\\s[0-9]{10}$";
             Regex regex1 = new Regex(NumberFormat);
             if (regex1.IsMatch(Number))
             {
+                status = true;
                 Console.Write("Given Phone Number is Valid \n");
             }
             else
             {
+                status = false;
                 Console.Write("Please Enter Number in Proper Format \n");
             }
+            return status;
         }
-        public void Password()
+        public bool Password(string Password)
         {
-            Console.WriteLine("Enter Password :");
-            var Password = Console.ReadLine();
+            bool status;
             var PasswordFormat = "[a-zA-Z0-9]{8,}";
             Regex regex1 = new Regex(PasswordFormat);
             if (regex1.IsMatch(Password))
             {
+                status = true;
                 Console.Write("Given Password is Valid \n");
             }
             else
             {
+                status = false;
                 Console.Write("Please Enter Password in Proper Format \n");
             }
+            return status;
         }
-        public void PasswordRule2()
+        public bool PasswordRule2(string Password)
         {
-            Console.WriteLine("Enter Password :");
-            var Password = Console.ReadLine();
+            bool status;
             var PasswordFormat = "(?=.*[A-Z])[a-zA-Z0-9]{8,}";
             Regex regex1 = new Regex(PasswordFormat);
             if (regex1.IsMatch(Password))
             {
+                status = true;
                 Console.Write("Given Password is Valid \n");
             }
             else
             {
+                status = false;
                 Console.Write("Please Enter Password in Proper Format \n");
             }
+            return status;
         }
-        public void PasswordRule3()
+        public bool PasswordRule3(string Password)
         {
-            Console.WriteLine("Enter Password :");
-            var Password = Console.ReadLine();
+            bool status;
             var PasswordFormat = "(?=.*[A-Z0-9])[a-zA-Z0-9]{8,}";
             Regex regex1 = new Regex(PasswordFormat);
             if (regex1.IsMatch(Password))
             {
+                status = true;
                 Console.Write("Given Password is Valid \n");
             }
             else
             {
+                status = false;
                 Console.Write("Please Enter Password in Proper Format \n");
             }
+            return status;
         }
-        public void PasswordRule4()
+        public bool PasswordRule4(string Password)
         {
-            Console.WriteLine("Enter Password :");
-            var Password = Console.ReadLine();
-            //var PasswordFormat = "(?=.*[A-Z0-9](?=.*[$!%*#?&])[a-zA-Z0-9]{8,}[$!%*#?&]{1}$";
+            bool status;
             var PasswordFormat1= "^(?=.*[@#$%0-9A-Z])[@#$%0-9a-zA-Z]{8,}$";
             Regex regex1 = new Regex(PasswordFormat1);
             if (regex1.IsMatch(Password))
             {
+                status = true;
                 Console.Write("Given Password is Valid \n");
             }
             else
             {
+                status = false;
                 Console.Write("Please Enter Password in Proper Format \n");
             }
+            return status;
         }
         
     }

@@ -10,39 +10,57 @@ while (true)
     {
         case 1:
             RegexValidation r1 = new();
-            r1.FirstNameValidation();
+            Console.WriteLine("Enter First Name");
+            string Firstname = Console.ReadLine();
+            r1.FirstNameValidation(Firstname);
             break;
         case 2:
+            Console.WriteLine("Enter Last Name");
+            string Lastname = Console.ReadLine();
             RegexValidation r2 = new();
-            r2.LastNameValidation();
+            r2.LastNameValidation(Lastname);
             break;
         case 3:
             RegexValidation r3 = new();
-            r3.Email();
+            Console.WriteLine("Enter Email Id");
+            string email = Console.ReadLine();
+            r3.Email(email);
             break;
         case 4:
             RegexValidation r4 = new();
-            r4.MobileNumber();
+            Console.WriteLine("Enter Mobile Number");
+            string Number = Console.ReadLine();
+            r4.MobileNumber(Number);
             break;
         case 5:
             RegexValidation r5 = new();
-            r5.Password();
+            Console.WriteLine("Enter Password :");
+            string Password = Console.ReadLine();
+            r5.Password(Password);
             break;
         case 6:
             RegexValidation r6 = new();
-            r6.PasswordRule2();
+            Console.WriteLine("Enter Password :");
+            string Password1 = Console.ReadLine();
+            r6.PasswordRule2(Password1);
             break;
         case 7:
             RegexValidation r7 = new();
-            r7.PasswordRule3();
+            Console.WriteLine("Enter Password :");
+            string Password2 = Console.ReadLine();
+            r7.PasswordRule3(Password2);
             break;
         case 8:
             RegexValidation r8 = new();
-            r8.PasswordRule3();
+            Console.WriteLine("Enter Password :");
+            string Password3 = Console.ReadLine();
+            r8.PasswordRule4(Password3);
             break;
         case 9:
             EmailValidation test = new();
-            test.EmailSampleValidation();
+            Console.WriteLine("Enter Password :");
+            string email1 = Console.ReadLine();
+            test.EmailSampleValidation(email1);
             break;
         default:
             Console.WriteLine("Please enter the correct value.");
