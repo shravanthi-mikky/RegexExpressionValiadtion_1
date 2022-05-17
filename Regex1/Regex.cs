@@ -130,5 +130,6 @@ namespace Regex1
                 Console.Write("Please Enter Password in Proper Format \n");
             }
         }
+        
     }
 }
