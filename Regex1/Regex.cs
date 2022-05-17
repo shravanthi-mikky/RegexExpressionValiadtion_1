@@ -118,8 +118,9 @@ namespace Regex1
         {
             Console.WriteLine("Enter Password :");
             var Password = Console.ReadLine();
-            var PasswordFormat = "(?=.*[A-Z0-9](?=.*[$!%*#?&])[a-zA-Z0-9]{8,}[$!%*#?&]{1}";
-            Regex regex1 = new Regex(PasswordFormat);
+            //var PasswordFormat = "(?=.*[A-Z0-9](?=.*[$!%*#?&])[a-zA-Z0-9]{8,}[$!%*#?&]{1}$";
+            var PasswordFormat1= "^(?=.*[@#$%0-9A-Z])[@#$%0-9a-zA-Z]{8,}$";
+            Regex regex1 = new Regex(PasswordFormat1);
             if (regex1.IsMatch(Password))
             {
                 Console.Write("Given Password is Valid \n");
