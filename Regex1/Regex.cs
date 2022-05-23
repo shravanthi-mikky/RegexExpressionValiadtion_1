@@ -63,7 +63,7 @@ namespace Regex1
         public bool MobileNumber(string Number)
         {
             bool status;
-            string NumberFormat = "^[0-9]{2}\\s[6-9]{1}[0-9]{9}$";
+            string NumberFormat = "^[+]{1}[0-9]{2}\\s[6-9]{1}[0-9]{9}$";
             Regex regex1 = new Regex(NumberFormat);
             if (regex1.IsMatch(Number))
             {
