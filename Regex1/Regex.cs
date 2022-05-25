@@ -63,8 +63,9 @@ namespace Regex1
         public bool MobileNumber(string Number)
         {
             bool status;
-            string NumberFormat = "^[0-9]{2}\\s[0-9]{10}$";
-            Regex regex1 = new Regex(NumberFormat);
+            //string NumberFormat = "^[0-9]{2}\\s[0-9]{10}$";
+            string num = "^[+]{1}[1-9]{2}[ ]{1}[1-9]{2}[0-9]{8}$";
+            Regex regex1 = new Regex(num);
             if (regex1.IsMatch(Number))
             {
                 status = true;
@@ -145,6 +146,16 @@ namespace Regex1
             }
             return status;
         }
-        
+        public string FirstName_Format = "^[A-Z]{1}[a-z]{2,}";
+        public string LastName_Format = "^[A-Z]{1}[a-z]{2,}$";
+        public string Email_Format = "^[A-Za-z](.[a-z])+@[A-Za-z]+.[a-z]{2,4}(.[a-z]{2,3})?$";
+        public string PhoneNumber_Format = "^([+][0-9]{2}[ ]){0,1}[6-9]{1}[0-9]{9}$";
+        public string Password_Format = "^(?=.*[@#$%0-9A-Z])[@#$%0-9a-zA-Z]{8,}$";
+        public string LambdaExpressionFirstName(string firstName) => Regex.IsMatch(firstName, FirstName_Format) ? "First Name is Valid!" : "First Name is not Valid!";
+        public string LambdaExpressionLastName(string lastName) => Regex.IsMatch(lastName, LastName_Format) ? "Last Name is Valid!" : "Last Name is not Valid!";
+        public string LambdaExpressionEmail(string email) => Regex.IsMatch(email, Email_Format) ? "Email is Valid!" : "Email is not Valid!";
+        public string LambdaExpressionPhoneNumber(string phno) => Regex.IsMatch(phno, PhoneNumber_Format) ? "Phone Number is Valid!" : "Phone Number is not Valid!";
+        public string LambdaExpressionPassword(string password) => Regex.IsMatch(password, Password_Format) ? "Password is Valid!" : "Password is not Valid!";
+    
     }
 }

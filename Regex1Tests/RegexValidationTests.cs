@@ -39,8 +39,8 @@ namespace Regex1.Tests
         public void MobileNumberTest()
         {
             RegexValidation r4 = new();
-            r4.MobileNumber("");
-            Assert.AreEqual(true, r4.MobileNumber("91 8282828282"));
+            r4.MobileNumber("+91 8282828282");
+            Assert.AreEqual(true, r4.MobileNumber("+91 8282828282"));
         }
 
         [TestMethod()]
