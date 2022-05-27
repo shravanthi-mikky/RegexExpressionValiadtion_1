@@ -4,7 +4,7 @@ using Regex1;
 Console.WriteLine("Validation for Form ");
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1)First Name \n2 Last Name\n3) Email\n4) Mobile Number\n5) Password With min 8 Characters\n6) Password with atleast one capital letter\n7)Password with atleast one number\n8)Password with atleast one special character\n9)Email Sample Validation\n10)Using Custom Exception First Name\n11)Using Custom Exception Last Name\n12)Using Custom Exception Email Id\n13)Using Custom Exception Mobile Number\n14)Using Custom Exception Password\n15)Validation using Lambda Expression");
+    Console.WriteLine("Please choose the option :\n1) First Name\n2 Last Name\n3) Email\n4) Mobile Number\n5) Password With min 8 Characters\n6) Password with atleast one capital letter\n7)Password with atleast one number\n8)Password with atleast one special character\n9)Email Sample Validation\n10)Using Custom Exception First Name\n11)Using Custom Exception Last Name\n12)Using Custom Exception Email Id\n13)Using Custom Exception Mobile Number\n14)Using Custom Exception Password\n15)Validation using Lambda Expression");
     int option = Convert.ToInt16(Console.ReadLine());
     switch (option)
     {

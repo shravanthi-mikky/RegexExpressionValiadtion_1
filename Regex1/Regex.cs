@@ -146,6 +146,7 @@ namespace Regex1
             }
             return status;
         }
+        //Using Lambda expressions
         public string FirstName_Format = "^[A-Z]{1}[a-z]{2,}";
         public string LastName_Format = "^[A-Z]{1}[a-z]{2,}$";
         public string Email_Format = "^[A-Za-z](.[a-z])+@[A-Za-z]+.[a-z]{2,4}(.[a-z]{2,3})?$";
