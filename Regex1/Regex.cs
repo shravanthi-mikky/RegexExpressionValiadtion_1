@@ -9,12 +9,12 @@ namespace Regex1
 {
     public class RegexValidation
     {
-        public bool FirstNameValidation(string Firstname)
+        public bool FirstNameValidation(string FirstName)
         {
             bool status;
             string firstname = "^[A-Z]{1}[a-z]{2,}";
             Regex regex = new Regex(firstname);
-            if (regex.IsMatch(Firstname))
+            if (regex.IsMatch(FirstName))
             {
                 status = true;
                 Console.Write("Name is Valid \n");
@@ -63,9 +63,11 @@ namespace Regex1
         public bool MobileNumber(string Number)
         {
             bool status;
+
             //string NumberFormat = "^[0-9]{2}\\s[0-9]{10}$";
-            string num = "^[+]{1}[1-9]{2}[ ]{1}[1-9]{2}[0-9]{8}$";
-            Regex regex1 = new Regex(num);
+            string NumberFormat = "^[+]{1}[0-9]{2}\\s[6-9]{1}[0-9]{9}$";
+            Regex regex1 = new Regex(NumberFormat);
+
             if (regex1.IsMatch(Number))
             {
                 status = true;
